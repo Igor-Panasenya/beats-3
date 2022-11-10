@@ -1,0 +1,149 @@
+.discount {
+
+  .container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 3rem;
+    border: #181a1b 3px solid;
+    background-color: var(--color-bg-card);
+    padding: 48px 250px;
+    border-radius: 0.75rem;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: transparent;
+
+      & .discount-content h5 {
+        color: var(--color-main);
+      }
+    }
+    &:hover img {
+      transform: rotate(25deg) translate(50px, -20px);
+    }
+
+    .discount-content {
+      h5 {
+        color: var(--color-btn);
+      }
+      p {
+        color: var(--color-second);
+        font-weight: 600;
+        margin: 16px 0 32px 0;
+      }
+      .btn {
+        max-width: 150px;
+      }
+    }
+    img {
+      width: 300px;
+      height: auto;
+      transition: all ease .8s;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .discount {
+    padding: 0 20px;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 48px 50px;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .discount {
+
+    .container {
+      box-sizing: border-box;
+      display: flex;
+      padding: 48px 50px;
+
+      .discount-content {
+        position: relative;
+        width: 70%;
+        z-index: 1;
+
+        p {
+          font-size: .8rem;
+          margin: 16px 0 32px 0;
+        }
+      }
+      img {
+        position: absolute;
+        right: calc(-100vw + 90%);
+        top: 85px;
+        width: 350px;
+        height: auto;
+      }
+
+
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .discount {
+
+    .container {
+      position: relative;
+      justify-content: start;
+      padding: 40px;
+
+      .discount-content {
+        position: relative;
+        width: 70%;
+        z-index: 1;
+        margin-left: 0;
+
+        p {
+          position: relative;
+          font-size: .8rem;
+          margin: 16px 0 32px 0;
+          z-index: 1;
+        }
+      }
+      img {
+        position: absolute;
+        top: 85px;
+        width: 350px;
+        height: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 455px) {
+  .discount {
+
+    .container {
+      position: relative;
+      justify-content: start;
+      padding: 40px;
+
+      .discount-content {
+        position: relative;
+        width: 90%;
+        z-index: 1;
+        margin-left: 0;
+
+        p {
+          position: relative;
+          font-size: .8rem;
+          margin: 16px 0 32px 0;
+          z-index: 1;
+        }
+      }
+      img {
+        position: absolute;
+        top: 100px;
+        right: calc(-100vw + 65%);
+        width: 280px;
+        height: auto;
+      }
+    }
+  }
+}

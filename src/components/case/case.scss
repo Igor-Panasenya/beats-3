@@ -1,0 +1,164 @@
+.case {
+
+  padding-top: 8rem;
+  margin-bottom: 8rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .case-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      margin-top: 2rem;
+
+      img {
+        width: 45%;
+        height: 45%;
+      }
+      .case-text {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: var(--color-second);
+          font-weight: 500;
+          line-height: 2rem;
+          max-width: 250px;
+          margin: 10px 0 35px 0;
+        }
+        .btn {
+          max-width: 145px;
+        }
+
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .case {
+    height: 500px;
+    .container {
+      position: relative;
+
+      .case-content {
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        gap: 2rem;
+
+        .case-text {
+          width: 180px;
+
+          p {
+            line-height: 1.8rem;
+          }
+        }
+        img {
+          top: -2rem;
+          width: 210px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+//Modal case
+.modal-case {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+  color: var(--color-second);
+  background-color: var(--color-bg-card);
+  padding: 50px;
+
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all ease .5s;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+    top: 43%;
+  }
+
+  .modal-case-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .modal-case {
+    top: 41%;
+    width: 80vw;
+
+    &.visible {
+      top: 38%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .modal-case {
+    top: 38%;
+    width: 80vw;
+
+    &.visible {
+      top: 35%;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .modal-case {
+    top: 38%;
+    width: 80vw;
+    padding: 25px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+    .modal-case-info {
+      gap: .3rem;
+      margin-bottom: 1.5rem;
+
+      p {
+        font-size: .7rem;
+      }
+    }
+
+    &.visible {
+      top: 35%;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .modal-case {
+    top: 34%;
+    width: 80vw;
+
+    &.visible {
+      top: 31%;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.style {
+  padding-top: 8rem;
+
+  .container {
+    max-width: 35%;
+
+    .style-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1rem;
+      grid-row-gap: 7rem;
+      margin-top: 10rem;
+      margin-bottom: 8rem;
+
+      .style-card {
+        position: relative;
+        margin: 0 auto;
+
+        &:hover img {
+          top: 0px;
+        }
+
+        img {
+          position: absolute;
+          top: 15px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all ease .3s;
+
+          width: 60%;
+        }
+        .style-card-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          width: 162px;
+          height: 152px;
+          border-radius: 0.5rem;
+          background-color: var(--color-bg-card);
+          padding: 13.6px;
+
+          .style-card-content-left {
+            display: flex;
+            flex-direction: column;
+
+            .style-card-content-title {
+              color: var(--color-btn);
+              font-size: .875rem;
+              font-weight: 600;
+            }
+            .style-card-content-price {
+              color: var(--color-second);
+              font-size: .875rem;
+              font-weight: 600;
+            }
+          }
+          .btn {
+            padding: 8px!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .style {
+    .container {
+      max-width: 40%;
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .style {
+    .container {
+      max-width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 1150px) {
+  .style {
+    .container {
+      max-width: 60%;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .style {
+    .container {
+      max-width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .style {
+    .container {
+      max-width: 90%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .style {
+    .container {
+      max-width: 100%;
+
+      .style-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .style {
+    .container {
+
+      .style-list {
+        grid-template-columns: 1fr;
+        margin-top: 7rem;
+      }
+    }
+  }
+}
