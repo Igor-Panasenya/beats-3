@@ -100,6 +100,7 @@ button {
   font-size: 1rem;
   transition: var(--transition);
   cursor: pointer;
+  max-width: max-content!important;
 
   &:hover {
     background-color: var(--color-btn-hover)!important;
@@ -208,6 +209,22 @@ h6 {
   position: fixed;
   overflow: hidden!important;
 }
+
+//NOT FOUND PAGE
+.not-found {
+  margin-top: 200px;
+  padding: 28px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 80px;
+  }
+
+  .not-found-text {
+    margin: 26px 0;
+    font-size: 24px;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   h1 {

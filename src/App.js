@@ -1,16 +1,9 @@
-import Header from "./components/header/Header";
-import Banner from "./components/banner/Banner";
-import Sponsor from "./components/sponsors/Sponsor";
-import Specs from "./components/specs/Specs";
-import Case from "./components/case/Case";
-import Discount from "./components/dicsount/Discount";
-import Products from "./components/products/Products";
-import Footer from "./components/footer/Footer";
 import ButtonScrollUp from "./components/button-scroll-up/ButtonScrollUp";
 import React, {useEffect, createContext, useState} from "react";
-import Cart from "./components/cart/Cart";
-import DarkBG from "./components/dark-bg/DarkBG";
-import UseTheme from "./use-theme/UseTheme";
+import Layout from "./components/Layout";
+import MainPage from "./pages/MainPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import {Route, Routes} from "react-router-dom";
 
 export const VisibleCartContext = createContext();
 
@@ -33,20 +26,13 @@ function App() {
           <VisibleCartContext.Provider value={ {isVisibleCart, setIsVisibleCart} }>
 
               <div className="App">
-                  <Header scroll={scroll} />
+                  <Routes>
+                      <Route path="/" element={<Layout isVisibleCart={isVisibleCart} scroll={scroll} />} >
+                          <Route index element={<MainPage />} />
+                          <Route path="*" element={<NotFoundPage />} />
+                      </Route>
+                  </Routes>
 
-                  <main>
-                      <Banner />
-                      <Sponsor />
-                      <Specs />
-                      <Case />
-                      <Discount />
-                      <Products />
-                  </main>
-
-                  <Cart />
-                  {isVisibleCart && <DarkBG />}
-                  <Footer />
                   <ButtonScrollUp scroll={scroll} />
               </div>
 

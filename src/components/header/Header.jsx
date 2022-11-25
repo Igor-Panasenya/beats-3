@@ -38,7 +38,6 @@ const Header = ({scroll}) => {
     };
     const {darkTheme, setDarkTheme} = UseTheme();
 
-
     return (
         <header className={scroll > 50 ? 'header bg-visible' : 'header'}>
 

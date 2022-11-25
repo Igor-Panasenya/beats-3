@@ -4,8 +4,6 @@ import imageBeats from '../../img/home.png';
 import {BiShoppingBag} from "react-icons/bi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import {useContext} from "react";
-import {DarkModeContext} from "../../App";
 
 AOS.init({
     duration: 1500,
