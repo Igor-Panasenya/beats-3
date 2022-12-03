@@ -45,7 +45,7 @@
     flex-direction: column;
     gap: .5rem;
     margin: 2rem 0;
-    height: 69vh;
+    height: calc(100vh - (2.5rem + 80px + 2rem + 28px + 6rem));
     overflow: scroll;
     overflow-x: hidden;
 
@@ -217,9 +217,6 @@
     .btn-cart-close {
       top: 16px;
       right: 16px;
-    }
-    .cart-items {
-      height: 61%;
     }
     .cart-total-price {
       bottom: 9rem;
